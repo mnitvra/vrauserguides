@@ -17,7 +17,7 @@
     
     
       
-        <title>Frequently Asked Questions - MNIT vRA Runbook</title>
+        <title>Provision Notes-Details-Tips - MNIT vRA Runbook</title>
       
     
     
@@ -61,6 +61,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#provision-notes-details-tips" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -85,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Frequently Asked Questions
+              Provision Notes-Details-Tips
             
           </span>
         </div>
@@ -361,12 +366,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
       FAQ
@@ -388,18 +391,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-    <a href="./" title="Frequently Asked Questions" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../faq/" title="Frequently Asked Questions" class="md-nav__link">
       Frequently Asked Questions
     </a>
-    
   </li>
 
         
@@ -469,6 +465,80 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#field-information" class="md-nav__link">
+    Field Information
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debug-option" class="md-nav__link">
+    Debug Option
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dev-vs-test-server-naming" class="md-nav__link">
+    Dev vs Test Server Naming
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#builder-access-rights" class="md-nav__link">
+    Builder Access Rights
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jumbo-provision-approvals" class="md-nav__link">
+    Jumbo Provision Approvals
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#field-validation" class="md-nav__link">
+    Field Validation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resubmission-options" class="md-nav__link">
+    Resubmission Options
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -478,9 +548,29 @@
                   
                 
                 
-                  <h1>Frequently Asked Questions</h1>
-                
-                
+                <h1 id="provision-notes-details-tips">Provision Notes-Details-Tips<a class="headerlink" href="#provision-notes-details-tips" title="Permanent link">&para;</a></h1>
+<h2 id="field-information">Field Information<a class="headerlink" href="#field-information" title="Permanent link">&para;</a></h2>
+<p>Many fields in the provision form show extra informational details by hovering over the circled 'i'.</p>
+<h2 id="debug-option">Debug Option<a class="headerlink" href="#debug-option" title="Permanent link">&para;</a></h2>
+<p>The debug option, if visible, is only for developer and specific testing use and should not be used for production builds.</p>
+<h2 id="dev-vs-test-server-naming">Dev vs Test Server Naming<a class="headerlink" href="#dev-vs-test-server-naming" title="Permanent link">&para;</a></h2>
+<p>The current automated process does not allow for server name that references "DEV" for the Environment choice. The environment choice determines the 4th character of the server name by MNIT naming standards. 'TEST' is available as an option and will set the 4th character of the server name to 'T'. Ex. G46TAWTESTVM01 is valid. G46DAWTESTVM01 is NOT a possible or valid server name. The server name entry in the custom server name field must match the environment choice to allow a provision request to continue. </p>
+<h2 id="builder-access-rights">Builder Access Rights<a class="headerlink" href="#builder-access-rights" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code><span class="err">This section needs more work</span>
+</code></pre></div>
+
+
+<h2 id="jumbo-provision-approvals">Jumbo Provision Approvals<a class="headerlink" href="#jumbo-provision-approvals" title="Permanent link">&para;</a></h2>
+<p>Provision requests that exceed certain CPU, Mem, and Storage limits will generate an automated approval request to the Virtualization Team. </p>
+<div class="codehilite"><pre><span></span><code><span class="n">CPU</span><span class="o">:</span> <span class="mi">12</span>
+<span class="n">MEM</span><span class="o">:</span> <span class="mi">24</span><span class="n">GB</span>
+<span class="n">STORAGE</span><span class="o">:</span> <span class="n">NONE</span> <span class="n">Currently</span>
+</code></pre></div>
+
+
+<h2 id="field-validation">Field Validation<a class="headerlink" href="#field-validation" title="Permanent link">&para;</a></h2>
+<p>Many fields are validated to allow correctly formatted entries. A red circled ! indicates a validation failure. Correct the entry to continue. </p>
+<h2 id="resubmission-options">Resubmission Options<a class="headerlink" href="#resubmission-options" title="Permanent link">&para;</a></h2>
                 
               
               
@@ -495,41 +585,6 @@
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../agencies_status/" title="Agency Provision Ready Status" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Agency Provision Ready Status
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../../about/contributing/" title="Comments/Suggestions" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Comments/Suggestions
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

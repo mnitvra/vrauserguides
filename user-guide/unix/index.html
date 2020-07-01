@@ -288,15 +288,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#procedure" class="md-nav__link">
-    Procedure
+  <a href="#provision-procedure" class="md-nav__link">
+    Provision Procedure
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#notes" class="md-nav__link">
-    Notes
+  <a href="#deployment-failure-handling" class="md-nav__link">
+    Deployment Failure Handling
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#provision-notesdetails" class="md-nav__link">
+    Provision Notes/Details
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agency-provisioning-readiness-status" class="md-nav__link">
+    Agency Provisioning Readiness Status
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rhel-oel-provision-screenshot-examples" class="md-nav__link">
+    RHEL OEL Provision Screenshot Examples
   </a>
   
 </li>
@@ -563,15 +584,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#procedure" class="md-nav__link">
-    Procedure
+  <a href="#provision-procedure" class="md-nav__link">
+    Provision Procedure
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#notes" class="md-nav__link">
-    Notes
+  <a href="#deployment-failure-handling" class="md-nav__link">
+    Deployment Failure Handling
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#provision-notesdetails" class="md-nav__link">
+    Provision Notes/Details
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agency-provisioning-readiness-status" class="md-nav__link">
+    Agency Provisioning Readiness Status
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rhel-oel-provision-screenshot-examples" class="md-nav__link">
+    RHEL OEL Provision Screenshot Examples
   </a>
   
 </li>
@@ -604,10 +646,10 @@
 </ul>
 </li>
 </ul>
-<h2 id="procedure">Procedure<a class="headerlink" href="#procedure" title="Permanent link">&para;</a></h2>
+<h2 id="provision-procedure">Provision Procedure<a class="headerlink" href="#provision-procedure" title="Permanent link">&para;</a></h2>
 <p>Note: The VM build forms will show annoying spinners on some dynamic fields for a short period that will prevent using those fields until the dynamic processing is complete. Either wait or begin to fill out available static fields. As fields are completed, dynamic spinners will return for some fields. </p>
 <ol>
-<li><strong><a href="../logon/">LOGON</a></strong> to vRA</li>
+<li><strong><a href="../logon/">'LOGON'</a></strong> to vRA</li>
 <li><strong><em>CATALOG</em></strong> tab</li>
 <li><strong>SEARCH</strong> for "allinone" in the catalog search just above the list of catalog items<ul>
 <li>Do not use the "On Behalf of:" or other searchs found on the page</li>
@@ -618,24 +660,21 @@
 <li><strong>COPY PASTE</strong> Work Order from Remedy ticket</li>
 <li><strong>COPY PASTE</strong> Request Number from Remedy ticket</li>
 <li><strong>COPY PASTE</strong> Purpose/Function Designator from Remedy ticket</li>
-<li><strong>COPY PASTE</strong> Technical Contact from Remedy ticket</li>
+<li><strong>COPY PASTE</strong> Technical Contact (@state.mn.us addresses allowed) from Remedy ticket</li>
 <li><strong>SELECT <em>UNIX-RHEL|OEL</em></strong> category</li>
 <li><strong>SELECT <em>DATACENTER</em></strong><ul>
 <li>If customer is not requesting a specific datacenter, then accept the default</li>
 </ul>
 </li>
 <li><strong>SELECT <em>OS</em></strong> as requested in Remedy ticket</li>
-<li><strong><a href="../nsx/">SELECT <em>NSX</em></a></strong> wrapper</li>
+<li><strong><a href="../nsx/">SELECT <em>'NSX'</em></a></strong> wrapper</li>
 <li><strong>SELECT <em>RHEL| OEL PATCHING</em></strong> as requested in Remedy ticket</li>
 <li><strong>SELECT <em>TIER</em></strong> as requested in Remedy ticket</li>
 <li><strong>SELECT <em>ENVIRONMENT</em></strong> as requested in Remedy ticket</li>
-<li><strong>SELECT <em>DNS SUFFIX</em></strong> as requested in Remedy ticket<ul>
-<li><a href="../agencies_status/">Agency Domain Readiness Status</a></li>
-</ul>
-</li>
+<li><strong>SELECT <em>DNS SUFFIX</em></strong> as requested in Remedy ticket</li>
 <li><strong>SELECT <em>NAMING SCHEME</em></strong><ul>
-<li>'Generated' - Used for Dev test builds and special cases where an auto-generated name makes sense.</li>
-<li>'Custom' - Most customers request this option by supplying a server name of their preference in the Remedy ticket. As of this writing, ALL production VM provisioning is to be done with the Custom naming scheme.</li>
+<li>'<em>Generated</em>' - Used for Dev test builds and special cases where an auto-generated name makes sense.</li>
+<li>'<em>Custom</em>' - Most customers request this option by supplying a server name of their preference in the Remedy ticket. As of this writing, ALL production VM provisioning is to be done with the Custom naming scheme.</li>
 </ul>
 </li>
 <li><strong>COPY PASTE</strong> Custom Server Name from Remedy ticket<ul>
@@ -647,7 +686,10 @@
 </ul>
 </li>
 <li><strong>SELECT <em>CPUs</em></strong> as requested in the Remedy ticket</li>
-<li><strong>SELECT <em>MEMORY</em></strong> as requested in the Remedy ticket</li>
+<li><strong>SELECT <em>MEMORY</em></strong> as requested in the Remedy ticket<ul>
+<li>Requests over certain resource thresholds will automatically trigger an approval request to the Virtualization Team. See <a href="#jumbo-provision-approvals">'Jumbo Approvals'.</a></li>
+</ul>
+</li>
 <li><strong>SELECT <em>ANSIBLE TOWER JOB TEMPLATE</em></strong> as required for request.<ul>
 <li>Not currently specified in Remedy request. Determined by Unix support team.</li>
 </ul>
@@ -656,6 +698,7 @@
 <li><strong>SELECT <em>DATA PROTECTION CATEGORY</em></strong> as requested in Remedy ticket</li>
 <li><strong>SELECT <em>ADD SECONDARY DISK(s)</em></strong> if requested in Remedy ticket<ul>
 <li>Selecting YES will popup an 'Add Disks' tab to configure extra disks</li>
+<li>RHEL OEL provisions require a secondary disk of at least 35GB. The form defaults with a 35GB secondary disk that can be expanded as necessary. More secondary disks may be added as requested. </li>
 </ul>
 </li>
 <li><strong>SELECT <em>CHARGE CODE</em></strong> as requested <ul>
@@ -665,13 +708,26 @@
 </li>
 <li><strong><em>SQL BUILD?</em></strong> set to <strong>NO</strong></li>
 <li><strong>SUBMIT</strong></li>
+<li><strong>DEPLOYMENTS</strong> tab to view deployment progress<ul>
+<li>RHEL OEL deployment time estimate: 10-20 minutes</li>
+</ul>
+</li>
 </ol>
-<h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
-<p>i informational notes</p>
-<p>debug</p>
-<p>Test vs Stage names</p>
-<p>Builder access rights</p>
-<p>Jumbo approvals</p>
+<h2 id="deployment-failure-handling"><a href="../troubleshooting/">Deployment Failure Handling</a><a class="headerlink" href="#deployment-failure-handling" title="Permanent link">&para;</a></h2>
+<p>If a deployment encounters a failure, review the link for more information.</p>
+<hr />
+<h2 id="provision-notesdetails"><a href="../provisionnotes/">Provision Notes/Details</a><a class="headerlink" href="#provision-notesdetails" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Field Informational Details</li>
+<li>Field Validation</li>
+<li>Debug Option</li>
+<li>Dev vs Test Server Naming</li>
+<li>Builder Access Rights</li>
+<li>Jumbo Provision Approvals</li>
+<li>Resubmission Options</li>
+</ul>
+<h2 id="agency-provisioning-readiness-status"><a href="../agencies_status/">Agency Provisioning Readiness Status</a><a class="headerlink" href="#agency-provisioning-readiness-status" title="Permanent link">&para;</a></h2>
+<h2 id="rhel-oel-provision-screenshot-examples">RHEL OEL Provision Screenshot Examples<a class="headerlink" href="#rhel-oel-provision-screenshot-examples" title="Permanent link">&para;</a></h2>
                 
               
               
