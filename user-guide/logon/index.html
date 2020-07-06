@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#vra-logon-procedure" class="md-skip">
+        <a href="#vra-logon" class="md-skip">
           Skip to content
         </a>
       
@@ -593,80 +593,34 @@
                 
                 
                 <p><img src = 'https://mn.gov/mnit/assets/mn-minnesota-it-services-logo_tcm38-255509.png' WIDTH='170'></p>
-<h1 id="vra-logon-procedure"><strong>vRA Logon Procedure</strong><a class="headerlink" href="#vra-logon-procedure" title="Permanent link">&para;</a></h1>
+<h1 id="vra-logon"><strong>vRA Logon</strong><a class="headerlink" href="#vra-logon" title="Permanent link">&para;</a></h1>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
-<p>How to log on to vRA .</p>
+<p>Steps to log on to vRA.</p>
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Access to vRA with VM builder rights</li>
-<li>A submitted Remedy virtual server build request<ul>
-<li>One per server</li>
+<li>Access to vRA<ul>
+<li>Windows and Unix Teams have basic access</li>
+<li>Other staff that need access can notify the virtualizaion team to verify access</li>
 </ul>
 </li>
+<li>State.mn.gov PA account</li>
 </ul>
 <h2 id="procedure">Procedure<a class="headerlink" href="#procedure" title="Permanent link">&para;</a></h2>
-<p>Note: The VM build forms will show annoying spinners on some dynamic fields for a short period that will prevent using those fields until the dynamic processing is complete. Either wait or begin to fill out available static fields. As fields are completed, dynamic spinners will return for some fields. </p>
 <ol>
-<li><strong><a href="./">"LOGON"</a></strong> to vRA</li>
-<li><strong><em>CATALOG</em></strong> tab</li>
-<li><strong>SEARCH</strong> for "allinone" in the catalog search just above the list of catalog items<ul>
-<li>Do not use the "On Behalf of:" or other searchs found on the page</li>
-</ul>
-</li>
-<li><strong>REQUEST</strong></li>
-<li><strong>SELECT <em>BUSINESS GROUP</em></strong> (agency)</li>
-<li><strong>COPY PASTE</strong> Work Order from Remedy ticket</li>
-<li><strong>COPY PASTE</strong> Request Number from Remedy ticket</li>
-<li><strong>COPY PASTE</strong> Purpose/Function Designator from Remedy ticket</li>
-<li><strong>COPY PASTE</strong> Technical Contact from Remedy ticket</li>
-<li><strong>SELECT <em>WINDOWS</em></strong> category</li>
-<li><strong>SELECT <em>DATACENTER</em></strong><ul>
-<li>If customer is not requesting a specific datacenter, then accept the default</li>
-</ul>
-</li>
-<li><strong>SELECT <em>OS</em></strong> as requested in Remedy ticket</li>
-<li><strong><a href="../nsx/">"SELECT <em>NSX</em>"</a></strong> wrapper</li>
-<li><strong>SELECT <em>WINDOWS PATCHING</em></strong> as requested in Remedy ticket</li>
-<li><strong>SELECT <em>TIER</em></strong> as requested in Remedy ticket</li>
-<li><strong>SELECT <em>ENVIRONMENT</em></strong> as requested in Remedy ticket</li>
-<li><strong>SELECT <em>DOMAIN</em></strong> as requested in Remedy ticket<ul>
-<li><a href="../agencies_status/">"Agency Domain Readiness Status"</a></li>
-</ul>
-</li>
-<li><strong>SELECT <em>NAMING SCHEME</em></strong><ul>
-<li>'Generated' - Used for Dev test builds and special cases where an auto-generated name makes sense.</li>
-<li>'Custom' - Most customers request this option by supplying a server name of their preference in the Remedy ticket. As of this writing, ALL production VM provisioning is to be done with the Custom naming scheme.</li>
-</ul>
-</li>
-<li><strong>COPY PASTE</strong> Custom Server Name from Remedy ticket<ul>
-<li>First 6 characters of custom server name must match agency, tier, and environment field selections</li>
-</ul>
-</li>
-<li><strong>SELECT <em>BACKUP TIME</em></strong><ul>
-<li>If customer does not request a specific time, select one randomly</li>
-</ul>
-</li>
-<li><strong>SELECT <em>CPUs</em></strong> as requested in the Remedy ticket</li>
-<li><strong>SELECT <em>MEMORY</em></strong> as requested in the Remedy ticket</li>
-<li><strong>SELECT <em>DATA PROTECTION CATEGORY</em></strong> as requested in Remedy ticket</li>
-<li><strong>SELECT <em>ADD SECONDARY DISK(s)</em></strong> if requested in Remedy ticket<ul>
-<li>Selecting YES will popup an 'Add Disks' tab to configure extra disks</li>
-</ul>
-</li>
-<li><strong><em>ADD AD SECURITY GROUP ADMINS</em></strong> if requested in Remedy ticket<ul>
-<li>Selecting <strong>YES</strong> will popup an 'Add Windows Server Admins(s)' tab</li>
-<li>Only accounts allowed are PA accounts in the 'priviledged' OU for the specified Domain field will be shown as a choice.</li>
-</ul>
-</li>
-<li><strong>SELECT <em>CHARGE CODE</em></strong> as requested <ul>
-<li>Manual Charge Code option is for cross-agency builds</li>
-<li>Example: MNIT Enterprise G46 is requesting a build for a customer agency and the requested Charge Code is not available in the visible charge code pull down list</li>
-</ul>
-</li>
-<li><strong><em>SQL BUILD?</em></strong></li>
-<li><strong>SUBMIT</strong></li>
+<li><strong><a href="https://mnitvra01.state.mn.gov/vcac/org/mnit">LOGON</a></strong> to vRA</li>
+<li><strong>CHANGE TO A DIFFERENT DOMAIN</strong> domain selection to <strong>STATE.MN.GOV</strong></li>
+<li><strong>ENTER</strong> your state PA username (just the username - i.e. PAG46ABC01)</li>
+<li><strong>ENTER</strong> your state PA password</li>
+<li><strong>SIGN IN</strong></li>
 </ol>
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
+<p>Chrome browser recommended.</p>
+<p>IE works but may have issues with Remote Console.</p>
+<p>Popups must be allowed for the site.</p>
+<p>'Forgot password?' option does not work. If you have forgotten your state PA account password, use the <a href="https://passwordreset.mnit.state.mn.us/Login.aspx">MNIT password self-service site</a> or contact the MNIT Helpdesk (651-297-1111). </p>
+<p>Correct URL is https://mnitvra01.state.mn.gov/vcac/org/mnit. </p>
+<p>https://mnitvra01.state.mn.gov is NOT correct and will not allow you to logon.</p>
+<p>Session timeout is 30 minutes.</p>
                 
               
               
