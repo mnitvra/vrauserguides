@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              vRA Basics
+              vRA Home
             
           </span>
         </div>
@@ -173,14 +173,14 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        vRA Basics
+        vRA Home
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
         </span>
       </label>
     
-    <a href="." title="vRA Basics" class="md-nav__link md-nav__link--active">
-      vRA Basics
+    <a href="." title="vRA Home" class="md-nav__link md-nav__link--active">
+      vRA Home
     </a>
     
       
@@ -206,6 +206,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#target-audience" class="md-nav__link">
+    Target Audience
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#current-capabilities" class="md-nav__link">
     Current Capabilities
   </a>
@@ -220,22 +227,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#faq" class="md-nav__link">
-    FAQ
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#helpful-links" class="md-nav__link">
     Helpful Links
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#glossary" class="md-nav__link">
-    Glossary
   </a>
   
 </li>
@@ -392,6 +385,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="user-guide/glossary/" title="Glossary" class="md-nav__link">
+      Glossary
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -430,6 +435,18 @@
   <li class="md-nav__item">
     <a href="user-guide/agencies_status/" title="Agency Provision Ready Status" class="md-nav__link">
       Agency Provision Ready Status
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="user-guide/maintenance/" title="Maintenance Windows" class="md-nav__link">
+      Maintenance Windows
     </a>
   </li>
 
@@ -530,6 +547,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="user-guide/contacts/" title="Support Contacts" class="md-nav__link">
+      Support Contacts
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -568,6 +597,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#target-audience" class="md-nav__link">
+    Target Audience
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#current-capabilities" class="md-nav__link">
     Current Capabilities
   </a>
@@ -582,22 +618,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#faq" class="md-nav__link">
-    FAQ
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#helpful-links" class="md-nav__link">
     Helpful Links
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#glossary" class="md-nav__link">
-    Glossary
   </a>
   
 </li>
@@ -625,42 +647,23 @@
 <p>POC Early Rough Drafts...if you couldn't tell - Working on a new documentation structure for vRA</p>
 <p>vRA is the automation tool used to provision on-prem MNIT VM resources. Also known as MNIT Cloud. Not to be confused with other cloud offerings such as AWS or Azure cloud products. </p>
 <p>This document contains user guides and other information for provisioning virtual machines.</p>
+<h2 id="target-audience">Target Audience<a class="headerlink" href="#target-audience" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>MNIT Enterprise support teams with a need to directly support MNIT Cloud virtual machines. </p>
+</li>
+<li>
+<p>MNIT Enterprise support staff tasked with provisioning MNIT Cloud virtual machines. </p>
+</li>
+</ul>
 <h2 id="current-capabilities">Current Capabilities<a class="headerlink" href="#current-capabilities" title="Permanent link">&para;</a></h2>
 <p>vRA is currently available for Windows 2016/2019 and RHEL 7/8 and OEL 7 virtual machine provisioning. Provisioning is currently available to the Virtualization Team and select windows and unix support staff. </p>
 <p>VM Console access through vRA is available for the Windows and Unix teams in addition to other MNIT support staff as needed. vCenter access in newer virtualization environments going forward will be strictly limited. </p>
 <h2 id="coming-attractions">Coming Attractions<a class="headerlink" href="#coming-attractions" title="Permanent link">&para;</a></h2>
-<p>Linux team provisioning Linux machines</p>
+<p>MNIT Linux team provisioning production Linux machines</p>
 <p>vRA 8</p>
-<h2 id="faq">FAQ<a class="headerlink" href="#faq" title="Permanent link">&para;</a></h2>
-<p>Q. <strong>Why is MNIT using vRA?</strong></p>
-<p>A. To distribute access to provision MNIT Cloud infrastructure resources by providing a self-service portal to internal and external customers. To minimized delays in resource provisioning by automating repetivive and error prone processes. vRA serves as a central coordinating hub between several previously isolated technologies such as IPAM (IP management), backups, patching, Ansible, and Microsoft AD integrations. By automating much of the provision process, requests are fullfilled faster and in a standardized manner while abstracting the complex back end infrastructure that was previously handled only by a narrow scope of experienced staff. </p>
-<p>Q. <strong>Can we have access to vCenter for MNIT Cloud?</strong></p>
-<p>A. No. Industry best practice is to not distribute access to virtual machines via vCenter for security and operational reasons. RDP and vRA VM Console access are available for MNIT Cloud virtual machine access. </p>
-<p>Q. <strong>MNIT Cloud vs SDDC?</strong></p>
-<p>A. MNIT Cloud used to be called SDDC. SDDC is a generic term for software defined datacenter. </p>
-<p>Q. <strong>What is a blueprint?</strong></p>
-<p>A. A vRA blueprint is a set of design instructions and deployment form that allow for delivering the provisioning of new virtual infrastrucure resources. </p>
-<p>Q. <strong>Future direction of vRA?</strong></p>
-<p>A. VM provisioning access opened up to the MNIT Windows and Unix teams with access being given to select agency customers at an as yet undermined date. vRA 8 is the next major new release of vRA and represents a top down full architectural software overhaul. Essentially a brand new 1.0 product. Development is currently in progress interally with a 2021 release planned for MNIT. </p>
-<p>Add a link to vRA 8 info</p>
-<p>Q. <strong>What are the new server naming restrictions?</strong></p>
-<p>A. The automation infrastructure requires the Windows server naming agency code prefix (first 3 characters) to match the corresponding domain the server is joined to. For example, if a server needs to be in the admin.state.mn.us domain, its name will begin with G02. Even if MNIT (G46) is requesting it. Billing is not tied to the server name. Any charge code can be applied to any server as needed so MNIT enterprise can still be billed for agency customer domain machines they request. </p>
-<p>Q. How long do provision requests take?</p>
 <h2 id="helpful-links">Helpful Links<a class="headerlink" href="#helpful-links" title="Permanent link">&para;</a></h2>
 <p><a href="https://docs.vmware.com/en/vRealize-Automation/7.6/vrealize-automation-76-reference-architecture.pdf">vRA 7.6 Reference Architecture</a></p>
-<h2 id="glossary">Glossary<a class="headerlink" href="#glossary" title="Permanent link">&para;</a></h2>
-<p>Business Group</p>
-<p>NSX Wrapper</p>
-<p>Datacenter</p>
-<p>Remedy</p>
-<p>Charge Code</p>
-<p>Work Order</p>
-<p>REQ Number</p>
-<p>Tier</p>
-<p>Environment</p>
-<p>Naming Scheme</p>
-<p>Ansible</p>
-<p>Data Protection Category</p>
                 
               
               

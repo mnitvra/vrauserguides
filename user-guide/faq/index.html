@@ -159,8 +159,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="vRA Basics" class="md-nav__link">
-      vRA Basics
+    <a href="../.." title="vRA Home" class="md-nav__link">
+      vRA Home
     </a>
   </li>
 
@@ -310,6 +310,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../glossary/" title="Glossary" class="md-nav__link">
+      Glossary
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -348,6 +360,18 @@
   <li class="md-nav__item">
     <a href="../agencies_status/" title="Agency Provision Ready Status" class="md-nav__link">
       Agency Provision Ready Status
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../maintenance/" title="Maintenance Windows" class="md-nav__link">
+      Maintenance Windows
     </a>
   </li>
 
@@ -457,6 +481,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../contacts/" title="Support Contacts" class="md-nav__link">
+      Support Contacts
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -480,7 +516,22 @@
                 
                   <h1>Frequently Asked Questions</h1>
                 
-                
+                <p>Q. <strong>Why is MNIT using vRA?</strong></p>
+<p>A. To distribute access to provision MNIT Cloud infrastructure resources by providing a self-service portal to internal and external customers. To minimized delays in resource provisioning by automating repetivive and error prone processes. vRA serves as a central coordinating hub between several previously isolated technologies such as IPAM (IP management), backups, patching, Ansible, and Microsoft AD integrations. By automating much of the provision process, requests are fullfilled faster and in a standardized manner while abstracting the complex back end infrastructure that was previously handled only by a narrow scope of experienced staff. </p>
+<p>Q. <strong>Can we have access to vCenter for MNIT Cloud?</strong></p>
+<p>A. No. Industry best practice is to not distribute access to virtual machines via vCenter for security and operational reasons. RDP and vRA VM Console access are available for MNIT Cloud virtual machine access. </p>
+<p>Q. <strong>MNIT Cloud vs SDDC?</strong></p>
+<p>A. MNIT Cloud used to be called SDDC. SDDC is a generic term for software defined datacenter. </p>
+<p>Q. <strong>What is a blueprint?</strong></p>
+<p>A. A vRA blueprint is a set of design instructions and deployment form that allow for delivering the provisioning of new virtual infrastrucure resources. </p>
+<p>Q. <strong>Future direction of vRA?</strong></p>
+<p>A. VM provisioning access opened up to the MNIT Windows and Unix teams with access being given to select agency customers at an as yet undermined date. vRA 8 is the next major new release of vRA and represents a top down full architectural software overhaul. Essentially a brand new 1.0 product. Development is currently in progress interally with a 2021 release planned for MNIT. </p>
+<p>Add a link to vRA 8 info</p>
+<p>Q. <strong>What are the new server naming restrictions?</strong></p>
+<p>A. The automation infrastructure requires the Windows server naming agency code prefix (first 3 characters) to match the corresponding domain the server is joined to. For example, if a server needs to be in the admin.state.mn.us domain, its name will begin with G02. Even if MNIT (G46) is requesting it. Billing is not tied to the server name. Any charge code can be applied to any server as needed so MNIT enterprise can still be billed for agency customer domain machines they request. </p>
+<p>Q. <strong>How long do provision requests take?</strong></p>
+<p>A. Windows: 15-25 minutes
+   RHEL/OEL: 12-20 minutes</p>
                 
               
               
@@ -499,7 +550,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../agencies_status/" title="Agency Provision Ready Status" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../maintenance/" title="Maintenance Windows" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -508,7 +559,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Agency Provision Ready Status
+                Maintenance Windows
               </div>
             </div>
           </a>
